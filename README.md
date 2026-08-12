@@ -15,7 +15,7 @@ Macros de debug **header-only** pour projets Arduino (ESP8266 / ESP32 / AVR / au
 **PlatformIO** (`lib_deps`) :
 ```ini
 lib_deps =
-    Fo170/Debug
+    https://github.com/Fo170/Debug.git
 ```
 
 **Arduino IDE** : via le gestionnaire de bibliothèques (recherche « Debug » Fo170) ou en copiant `Debug.h`/`library.properties` dans `libraries/Debug/`.
