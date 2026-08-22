@@ -1,6 +1,6 @@
 {
   "name": "Debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Macros de debug Arduino header-only : LOG_INFO/ERROR/WARNING avec fichier:ligne automatique, LOG_DEBUG conditionnel (DEBUG_VERBOSE), LOG_VALUE, BOOT_HALT pour arrêt volontaire documenté",
   "keywords": ["debug", "log", "serial", "macro", "arduino", "esp32", "esp8266"],
   "repository": {"type": "git", "url": "https://github.com/Fo170/Debug.git"},
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/Fo170/Debug",
   "frameworks": "arduino",
   "platforms": ["*"],
-  "headers": "Debug.h",
+  "headers": "Debug_Fo170.h",
   "export": {
     "exclude": [
       "*.md",

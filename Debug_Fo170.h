@@ -1,9 +1,9 @@
 #pragma once
 
 // ============================================================
-// Debug.h — Macros de log pour projets Arduino (header-only)
+// Debug_Fo170.h — Macros de log pour projets Arduino (header-only)
 // Auteur : Olivier FOURNET (org Fo170) — Licence GPL-3.0-only
-// Utilisation : #include "Debug.h" (Serial doit être en portée)
+// Utilisation : #include "Debug_Fo170.h" (Serial doit être en portée)
 // ============================================================
 
 #ifdef DEBUG_VERBOSE

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.1] - 2026-08-22
+
+Renommage du fichier `Debug.h` → `Debug_Fo170.h` : le nom `Debug.h` entrait en conflit en compilation sous Windows avec le `debug.h` des frameworks ESP8266/ESP32. `library.properties`, `library.json` et `README.md` mis à jour en conséquence.
+
 ## [1.0.0] - 2026-08-12
 
 Version initiale publiée.

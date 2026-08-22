@@ -1,6 +1,8 @@
 # Debug
 
-![License](https://img.shields.io/badge/license-GPL--3.0--only-blue.svg) ![Arduino](https://img.shields.io/badge/framework-Arduino-00979D.svg)
+![License](https://img.shields.io/badge/license-GPL--3.0--only-blue.svg) ![Arduino](https://img.shields.io/badge/framework-Arduino-00979D.svg) ![Version](https://img.shields.io/badge/version-1.0.1-brightgreen.svg)
+
+*Version 1.0.1 — GPL-3.0-only — Auteur : Olivier FOURNET (Fo170)*
 
 Macros de debug **header-only** pour projets Arduino (ESP8266 / ESP32 / AVR / autres), en français.
 
@@ -10,7 +12,7 @@ Macros de debug **header-only** pour projets Arduino (ESP8266 / ESP32 / AVR / au
 
 ## Installation
 
-**Copie directe** : déposer `Debug.h` à côté du fichier principal (`.ino`) ou dans le dossier `src/`.
+**Copie directe** : déposer `Debug_Fo170.h` à côté du fichier principal (`.ino`) ou dans le dossier `src/`.
 
 **PlatformIO** (`lib_deps`) :
 ```ini
@@ -18,13 +20,13 @@ lib_deps =
     https://github.com/Fo170/Debug.git
 ```
 
-**Arduino IDE** : via le gestionnaire de bibliothèques (recherche « Debug » Fo170) ou en copiant `Debug.h`/`library.properties` dans `libraries/Debug/`.
+**Arduino IDE** : via le gestionnaire de bibliothèques (recherche « Debug » Fo170) ou en copiant `Debug_Fo170.h`/`library.properties` dans `libraries/Debug/`.
 
 ## Utilisation rapide
 
 ```c
 #include <Arduino.h>
-#include "Debug.h"
+#include "Debug_Fo170.h"
 
 void setup() {
   Serial.begin(115200);
@@ -61,8 +63,8 @@ void setup() {
 ### Compilés UNIQUEMENT si `#define DEBUG_VERBOSE` avant l'`#include`
 
 ```c
-#define DEBUG_VERBOSE        // à placer AVANT #include "Debug.h"
-#include "Debug.h"
+#define DEBUG_VERBOSE        // à placer AVANT #include "Debug_Fo170.h"
+#include "Debug_Fo170.h"
 ```
 
 | Macro | Effet |
@@ -89,7 +91,7 @@ Sur ESP (8266/32), le watchdog pendant `while(1)` force un **reset**. Au boot su
 
 ## Pièges & liens
 
-- `Serial` doit être **en portée au point d'appel** : inclure `<Arduino.h>` (ou `"SerialWeb.h"` etc.) avant `Debug.h`.
+- `Serial` doit être **en portée au point d'appel** : inclure `<Arduino.h>` (ou `"SerialWeb.h"` etc.) avant `Debug_Fo170.h`.
 - **UTF-8** : le fichier est encodé en UTF-8 (émojis 📄 ❌ ⚠️ 🐛) — le moniteur série doit être configuré en UTF-8 pour un affichage correct.
 - `PRINTF_VERBOSE(x)` est un macro à **1 argument** (le format) : `PRINTF_VERBOSE("%d", v)` ne compile pas (la variante `(x, y)` est commentée dans le fichier).
 - `LOG_*` passent le message en `%s` : passer une chaîne (pointeur `char*`/`const char*` ou littéral).
