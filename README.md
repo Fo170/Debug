@@ -91,6 +91,7 @@ Sur ESP (8266/32), le watchdog pendant `while(1)` force un **reset**. Au boot su
 
 ## Pièges & liens
 
+- **Nom du fichier** : `Debug_Fo170.h` (et non `Debug.h`) — `Debug.h` entre en conflit sous Windows avec le `debug.h` des frameworks ESP8266/ESP32. Toujours inclure `Debug_Fo170.h`.
 - `Serial` doit être **en portée au point d'appel** : inclure `<Arduino.h>` (ou `"SerialWeb.h"` etc.) avant `Debug_Fo170.h`.
 - **UTF-8** : le fichier est encodé en UTF-8 (émojis 📄 ❌ ⚠️ 🐛) — le moniteur série doit être configuré en UTF-8 pour un affichage correct.
 - `PRINTF_VERBOSE(x)` est un macro à **1 argument** (le format) : `PRINTF_VERBOSE("%d", v)` ne compile pas (la variante `(x, y)` est commentée dans le fichier).
